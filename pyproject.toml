@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "datamoshing-with-optical-flow"
+version = "0.1.0"
+description = ""
+authors = ["Kyle Anthony Williams <kyle.anthony.williams2@gmail.com>"]
+readme = "README.md"
+packages = [{include = "datamoshing_with_optical_flow"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.2.2"
+opencv-contrib-python = "^4.11.0.86"
+
+
+[tool.poetry.group.dev.dependencies]
+opencv-stubs = "^0.0.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
