@@ -34,13 +34,13 @@ def flow(previous, next):
 	)
 
 
-	width, height, _ = np.shape(previous)
+	height, width, _ = np.shape(previous)
 	flow_mapping = np.zeros_like(displacement)
-	for x in range(width):
-		for y in range(height):
-			# TODO: why the swap?
-			flow_mapping[x, y, 0] = y
-			flow_mapping[x, y, 1] = x
+	for y in range(height):
+		for x in range(width):
+			flow_mapping[y, x, 0] = x
+			flow_mapping[y, x, 1] = y
+
 	# TODO: why the negation?
 	flow_mapping -= displacement
 	

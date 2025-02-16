@@ -1,1 +1,1 @@
-from .algorithm import datamosh
+from .algorithm import datamosh, well
